@@ -1,0 +1,31 @@
+<profiles>
+<profile>
+ <id>prod</id>
+<build>
+<plugins>
+     <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+   <artifactId>exec-maven-plugin</artifactId>
+   <version>1.1</version>
+            <executions>
+               <execution>
+                  <id>id.compile</id>
+                  <phase>compile</phase>
+                  <goals>
+                     <goal>exec</goal>
+                  </goals>
+                  <configuration>
+     <executable>git</executable>
+     <arguments>
+      <argument>--version</argument>
+     </arguments>
+    </configuration>
+               </execution>     
+            </executions>
+         </plugin>
+ 
+
+</plugins> 
+ </build>
+   </profile>
+  </profiles>
